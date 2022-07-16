@@ -6,19 +6,19 @@ info about russian metal stores in one plain CSV file.
 You can see it in action here:
 http://nagakama.ru
 
-## Installation on Ubuntu 20.04 blank server
+## Golden way installation on Ubuntu 20.04 blank server
 
-### installing stage
+### installapps stage
 
-`apt update`
-`apt install nginx`
-`apt install php7.4`
-`apt install php7.4-fpm`
-`apt install git`
-`apt install vi`
-`apt install wget`
+- `apt update`
+- `apt install nginx`
+- `apt install php7.4`
+- `apt install php7.4-fpm`
+- `apt install git`
+- `apt install vi`
+- `apt install wget`
 
-### configuration stage
+### configapps stage
 
 `cd /etc/php/7.4/fpm/pool.d`
 `vi www.conf`
@@ -39,12 +39,16 @@ replace on
 `rm /var/www/nagakama/nagakama.conf`
 `rm /var/www/nagakama/nagakama.ru`
 
-### starting stage
+### startapps stage
 
 `service php7.4-fpm start`
 `service nginx start`
 
 ### testing stage
+
+`nginx -v`
+`nginx -t`
+`service --status-all`
 
 `wget http://localhost`
 `vi index.html`
