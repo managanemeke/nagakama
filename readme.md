@@ -3,7 +3,7 @@
 Simple one PHP file site (webapp) for collecting
 info about russian metal stores in one plain CSV file.
 
-You can see it in action here:
+You can see it in action here:  
 http://nagakama.ru
 
 ## Golden way installation on Ubuntu 20.04 blank server
@@ -24,15 +24,15 @@ http://nagakama.ru
 - `cd ~`  
     `git clone https://github.com/managanemeke/nagakama`  
     `cd nagakama`  
-    `cp nagakama.ru /etc/nginx/sites-available/nagakama.ru`  
+    `cp nagakama /etc/nginx/sites-available/nagakama`  
     `cd /etc/nginx/sites-enabled/`  
-    `ln -s /etc/nginx/sites-available/nagakama.ru`  
+    `ln -s /etc/nginx/sites-available/nagakama`  
     `rm /etc/nginx/sites-enabled/default`
 
 - `cd ~`  
     `cp -r nagakama/ /var/www/nagakama/`  
     `rm /var/www/nagakama/nagakama.conf`  
-    `rm /var/www/nagakama/nagakama.ru`
+    `rm /var/www/nagakama/nagakama`
 
 ### startapps stage
 
