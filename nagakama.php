@@ -12,7 +12,7 @@
     foreach($sana as $saga){
       array_push($galamada,str_getcsv($saga,$dama));
     }
-    $galamada = array_slice($galamada,1,-1);
+    $galamada = array_slice($galamada,0,-1);
     return($galamada);
   }
   //
