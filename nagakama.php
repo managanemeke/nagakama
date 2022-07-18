@@ -163,6 +163,9 @@ button:hover {
   background-color: #f0f8ff;
   border-radius: 0.5rem;
 }
+.zalatana {
+  background-color: #fff099;
+}
 .baraka {
   display: grid;
   grid-template-columns: var(--vava);
@@ -189,8 +192,13 @@ function clearSelection(){
 //
 //
 //
+function bolokolovo(ma,na){
+  for(let mama of ma){
+    mama.classList.toggle(na);
+  }
+}
 function homo(hava){
-  console.log("homo");
+  //console.log("homo");
   let ha = hava.currentTarget;
   let hama = ha.dataset.hama;
   let lanaka = document.createElement("a");
@@ -198,7 +206,14 @@ function homo(hava){
   lanaka.setAttribute("target","_blank");
   lanaka.click();
   //console.log(hama);
-  
+}
+function dono(hava){
+  //console.log("dono");
+  let ha = hava.currentTarget;
+  //ha.classList.toggle("zalatana");
+  let salakarava = solokorovo(ha);
+  bolokolovo(salakarava,"zalatana");
+  //console.log(salakarava);
 }
 function paravarana(ha){
   let mada = ha.dataset.mada;
@@ -364,257 +379,308 @@ async function konokonoko(hava){
   }
   console.log(ga);
 }
+function torokoporo(){
+  let baranama = document.querySelector(".barana");
+  let ma = new DocumentFragment();
+  //
+  let na,ga;
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  na.innerHTML = "ссылка на прайс";
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ga = document.createElement("input");
+  ga.setAttribute("type","text");
+  ga.classList.add("natakama");
+  na.append(ga);
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ma.append(na);
+  ////
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  na.innerHTML = "имя рус";
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ga = document.createElement("input");
+  ga.setAttribute("type","text");
+  ga.classList.add("natakana");
+  na.append(ga);
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ma.append(na);
+  ////
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  na.innerHTML = "имя анг";
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ga = document.createElement("input");
+  ga.setAttribute("type","text");
+  ga.classList.add("natakaga");
+  na.append(ga);
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ma.append(na);
+  ////
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  na.innerHTML = "ссылка на контакты";
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ga = document.createElement("input");
+  ga.setAttribute("type","text");
+  ga.classList.add("natakaka");
+  na.append(ga);
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ma.append(na);
+  ////
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  na.innerHTML = "город анг";
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ga = document.createElement("input");
+  ga.setAttribute("type","text");
+  ga.classList.add("natakava");
+  na.append(ga);
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ma.append(na);
+  ////
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  na.innerHTML = "домен";
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ga = document.createElement("input");
+  ga.setAttribute("type","text");
+  ga.classList.add("natakafa");
+  na.append(ga);
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ma.append(na);
+  ////
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  na.innerHTML = "email";
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ga = document.createElement("input");
+  ga.setAttribute("type","text");
+  ga.classList.add("natakaba");
+  na.append(ga);
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ma.append(na);
+  ////
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  na.innerHTML = "фио менеджера";
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ga = document.createElement("input");
+  ga.setAttribute("type","text");
+  ga.classList.add("natakapa");
+  na.append(ga);
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ma.append(na);
+  ////
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  na.innerHTML = "телефон";
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ga = document.createElement("input");
+  ga.setAttribute("type","text");
+  ga.classList.add("natakada");
+  na.append(ga);
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ma.append(na);
+  ////
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  na.innerHTML = "добавочный";
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  ga = document.createElement("input");
+  ga.setAttribute("type","text");
+  ga.classList.add("natakata");
+  na.append(ga);
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  na.classList.add("batatana");
+  ga = document.createElement("button");
+  ga.innerHTML = "создать";
+  ga.classList.add("gadaraka");
+  ga.addEventListener("click",konokonoko);
+  na.append(ga);
+  ma.append(na);
+  ////
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  na.innerHTML = "&nbsp;";
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  na.innerHTML = "&nbsp;";
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  na.innerHTML = "&nbsp;";
+  ma.append(na);
+  //
+  na = document.createElement("div");
+  na.classList.add("paranaya");
+  na.innerHTML = "&nbsp;";
+  ma.append(na);
+  //
+  baranama.prepend(ma);
+}
+function solokorovo(ma){
+  //get list of all cells in row of the cell (ma)
+  //
+  let ka = new Array();
+  let ha = ma;
+  let lasaba = ha.parentNode.lastElementChild;
+  let fasaba = ha.parentNode.firstElementChild;
+  let kasaba = ha;
+  let lafala;
+  let namaba;
+  //
+  lafala = true;
+  ha = fasaba;
+  namaba = 0;
+  while(lafala){
+    if(ha == kasaba){lafala=false;namaba--;}
+    namaba++;
+    ha = ha.nextElementSibling;
+  }
+  //
+  let namarava = (namaba-namaba%namakana)/namakana;
+  //
+  lafala = true;
+  ha = fasaba;
+  namaba = 0;
+  while(lafala){
+    if(namaba >= namarava*namakana &&
+      namaba < (namarava+1)*namakana){
+        ka.push(ha);
+        //console.log(ha);
+    }
+    namaba++;
+    if(ha.nextElementSibling !== null){
+      ha = ha.nextElementSibling;
+    } else {
+      ha = null;
+    }
+    if(ha === null){lafala=false;}
+  }
+  //
+  return(ka);
+}
+function molozodoso(){
+  console.log("molozodoso");
+}
 function gorodomono(hava){
   if(hava.code == "KeyI" && (hava.altKey)){
-    let baranama = document.querySelector(".barana");
-    let ma = new DocumentFragment();
-    //
-    let na,ga;
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    na.innerHTML = "ссылка на прайс";
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ga = document.createElement("input");
-    ga.setAttribute("type","text");
-    ga.classList.add("natakama");
-    na.append(ga);
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ma.append(na);
-    ////
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    na.innerHTML = "имя рус";
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ga = document.createElement("input");
-    ga.setAttribute("type","text");
-    ga.classList.add("natakana");
-    na.append(ga);
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ma.append(na);
-    ////
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    na.innerHTML = "имя анг";
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ga = document.createElement("input");
-    ga.setAttribute("type","text");
-    ga.classList.add("natakaga");
-    na.append(ga);
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ma.append(na);
-    ////
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    na.innerHTML = "ссылка на контакты";
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ga = document.createElement("input");
-    ga.setAttribute("type","text");
-    ga.classList.add("natakaka");
-    na.append(ga);
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ma.append(na);
-    ////
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    na.innerHTML = "город анг";
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ga = document.createElement("input");
-    ga.setAttribute("type","text");
-    ga.classList.add("natakava");
-    na.append(ga);
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ma.append(na);
-    ////
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    na.innerHTML = "домен";
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ga = document.createElement("input");
-    ga.setAttribute("type","text");
-    ga.classList.add("natakafa");
-    na.append(ga);
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ma.append(na);
-    ////
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    na.innerHTML = "email";
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ga = document.createElement("input");
-    ga.setAttribute("type","text");
-    ga.classList.add("natakaba");
-    na.append(ga);
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ma.append(na);
-    ////
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    na.innerHTML = "фио менеджера";
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ga = document.createElement("input");
-    ga.setAttribute("type","text");
-    ga.classList.add("natakapa");
-    na.append(ga);
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ma.append(na);
-    ////
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    na.innerHTML = "телефон";
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ga = document.createElement("input");
-    ga.setAttribute("type","text");
-    ga.classList.add("natakada");
-    na.append(ga);
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ma.append(na);
-    ////
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    na.innerHTML = "добавочный";
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    ga = document.createElement("input");
-    ga.setAttribute("type","text");
-    ga.classList.add("natakata");
-    na.append(ga);
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    na.classList.add("batatana");
-    ga = document.createElement("button");
-    ga.innerHTML = "создать";
-    ga.classList.add("gadaraka");
-    ga.addEventListener("click",konokonoko);
-    na.append(ga);
-    ma.append(na);
-    ////
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    na.innerHTML = "&nbsp;";
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    na.innerHTML = "&nbsp;";
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    na.innerHTML = "&nbsp;";
-    ma.append(na);
-    //
-    na = document.createElement("div");
-    na.classList.add("paranaya");
-    na.innerHTML = "&nbsp;";
-    ma.append(na);
-    //
-    baranama.prepend(ma);
+    torokoporo();
+  } else if(hava.code == "KeyR" && (hava.altKey)){
+    molozodoso();
   }
 }
 function gotogotomo(ma){
   ma.addEventListener("dblclick",modo);
   ma.addEventListener("mousedown",
     (hava)=>{
-      if(hava.button==1 || hava.buttons==4){homo(hava)};
+      if(hava.button==1 || hava.buttons==4){homo(hava)}
+      else if(hava.button==0 || hava.buttons==4){dono(hava)};
     });
   ma.addEventListener("contextmenu",kopo);
 }
