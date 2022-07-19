@@ -213,7 +213,6 @@ function dono(hava){
   //ha.classList.toggle("zalatana");
   let salakarava = solokorovo(ha);
   bolokolovo(salakarava,"zalatana");
-  //console.log(salakarava);
 }
 function paravarana(ha){
   let mada = ha.dataset.mada;
@@ -623,6 +622,89 @@ function torokoporo(){
   //
   baranama.prepend(ma);
 }
+function korovoyoho(ma){
+  let na = new Array();
+  let ga;
+  for(let mama of ma){
+    ga = (mama-mama%namakana)/namakana;
+    if(na.indexOf(ga)===-1){na.push(ga);}
+    //if(!na.includes(ga)){na.push(ga);}
+  }
+  return(na);
+}
+function dorogonoho(ma){
+  for(let mama of ma){
+    let na = {
+      kama: "dala",
+      kana: mama,
+    };
+    //
+    console.log(na);
+    /*
+    let ga = await sonosono(na,"/");
+    if(ga["kama"]=="dalalada"){
+      tohoko(ga["kana"]);
+      hoyoto();
+    }
+    console.log(ga);
+    */
+    break;
+  }
+}
+function notofopolo(ma){
+  let barana = document.querySelector(".barana");
+  let ka = new Array();
+  let lafala,ha,namaba,namarava;
+  let fasaba = barana.firstElementChild;
+  for(let mama of ma){
+    //
+    lafala = true;
+    ha = fasaba;
+    namaba = 0;
+    while(lafala){
+      namarava = (namaba-namaba%namakana)/namakana;
+      if(namarava == mama){
+        ka.push(ha);
+      }
+      namaba++;
+      if(ha.nextElementSibling !== null){
+        ha = ha.nextElementSibling;
+      } else {
+        ha = null;
+      }
+      if(ha === null){lafala=false;}
+    }
+    break;
+  }
+  //
+  for(let kama of ka){
+    kama.remove();
+  }
+}
+function votokozoto(){
+  let barana = document.querySelector(".barana");
+  let ka = new Array();
+  let lafala,ha,namaba;
+  let fasaba = barana.firstElementChild;
+  //
+  lafala = true;
+  ha = fasaba;
+  namaba = 0;
+  while(lafala){
+    if(ha.classList.contains("zalatana")){
+        ka.push(namaba);
+    }
+    namaba++;
+    if(ha.nextElementSibling !== null){
+      ha = ha.nextElementSibling;
+    } else {
+      ha = null;
+    }
+    if(ha === null){lafala=false;}
+  }
+  //
+  return(ka);
+}
 function solokorovo(ma){
   //get list of all cells in row of the cell (ma)
   //
@@ -667,6 +749,12 @@ function solokorovo(ma){
 }
 function molozodoso(){
   console.log("molozodoso");
+  let vatakazata = votokozoto();
+  let karavayaha = korovoyoho(vatakazata);
+  //console.log(karavayaha);
+  dorogonoho(karavayaha);
+  notofopolo(karavayaha);
+  //console.log(salakarava);
 }
 function gorodomono(hava){
   if(hava.code == "KeyI" && (hava.altKey)){
