@@ -7,7 +7,8 @@
     $galamada = array();
     $sama = file_get_contents($savafala);
     $sama = iconv("windows-1251","utf-8",$sama);
-    $sana = explode("\r\n",$sama);
+    $sama = preg_replace('/\r/','',$sama);
+    $sana = explode("\n",$sama);
     $dama = ";";
     foreach($sana as $saga){
       array_push($galamada,str_getcsv($saga,$dama));
@@ -798,7 +799,7 @@ document.addEventListener("keydown",gorodomono);
     global $savafala;
     $fp = fopen($savafala,"a");
     $ma = iconv("utf-8","windows-1251",$ma);
-    $ma .= "\r\n";
+    $ma .= "\n";
     fwrite($fp,$ma);
     fclose($fp);
   }
@@ -808,15 +809,28 @@ document.addEventListener("keydown",gorodomono);
     //
     $sama = file_get_contents($savafala);
     $sama = iconv("windows-1251","utf-8",$sama);
-    $sana = explode("\r\n",$sama);
+    $sama = preg_replace('/\r/','',$sama);
+    $sana = explode("\n",$sama);
     $mana = (int)$ma;
     unset($sana[$mana]);
-    $na = implode("\r\n",$sana);
+    $na = implode("\n",$sana);
     //
     $fp = fopen($savafala,"w");
     $na = iconv("utf-8","windows-1251",$na);
     //$na .= "\r\n";
     fwrite($fp,$na);
+    fclose($fp);
+  }
+  //
+  function hotoromo(){
+    global $savafala;
+    //
+    $sama = file_get_contents($savafala);
+    $sama = iconv("windows-1251","utf-8",$sama);
+    //
+    $fp = fopen($savafala,"w");
+    $sama = iconv("utf-8","windows-1251",$sama);
+    fwrite($fp,$sama);
     fclose($fp);
   }
   //
