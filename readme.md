@@ -64,8 +64,8 @@ http://nagakama.ru
 
 - `md nagakama`  
     `cd nagakama`  
-    `certutil.exe -urlcache -split -f "http://managa.ru/nagakama.7z" nagakama.7z`  
-    `certutil.exe -urlcache -split -f "http://managa.ru/7za.exe" 7za.exe`  
+    `certutil -urlcache -split -f "http://managa.ru/nagakama.7z" nagakama.7z`  
+    `certutil -urlcache -split -f "http://managa.ru/7za.exe" 7za.exe`  
     `7za x -y -pCMgtdUk1YAvtqBSl0eaAJJcj3TcyHI1ZmTv7j4NoS9jIv6DNvN2MQsmSDANoeOjN nagakama.7z -r`  
 
 ### configapps stage
@@ -75,14 +75,15 @@ http://nagakama.ru
 
 ### startapps stage
 
-- `git-cmd.exe`  
+- `git-cmd`  
     `cd ..`  
     `git clone https://github.com/managanemeke/nagakama`  
-    `call nagakama_full_start.bat`
+    `call nagakama_full_start.bat`  
+    `cd ..`
 
 ### testing stage
 
-- `certutil.exe -urlcache -split -f "http://localhost/" index.html`  
+- `certutil -urlcache -split -f "http://localhost/" index.html`  
     `type index.html`  
     and you will see...
 
