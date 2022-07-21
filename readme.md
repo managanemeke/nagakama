@@ -22,17 +22,21 @@ http://nagakama.ru
     **"listen = 127.0.0.1:9123"**
 
 - `cd ~`  
+    `rm -r nagakama`  
     `git clone https://github.com/managanemeke/nagakama`  
     `cd nagakama`  
     `cp nagakama /etc/nginx/sites-available/nagakama`  
     `cd /etc/nginx/sites-enabled/`  
+    `rm nagakama`  
     `ln -s /etc/nginx/sites-available/nagakama`  
     `rm /etc/nginx/sites-enabled/default`
 
 - `cd ~`  
+    `rm -r /var/www/nagakama`  
     `cp -r nagakama/ /var/www/nagakama/`  
     `rm /var/www/nagakama/nagakama.conf`  
-    `rm /var/www/nagakama/nagakama`
+    `rm /var/www/nagakama/nagakama`  
+    `chown -R www-data:www-data /var/www/nagakama`
 
 ### startapps stage
 
@@ -48,3 +52,41 @@ http://nagakama.ru
 - `wget http://localhost`  
     `vi index.html`  
     and you will see...
+
+### stoping stage
+
+- `service nginx stop`  
+    `service php7.4-fpm stop`
+
+## Golden way installation on Windows 7
+
+### installapps stage
+
+- `md nagakama`  
+    `cd nagakama`  
+    `certutil.exe -urlcache -split -f "http://managa.ru/nagakama.7z" nagakama.7z`  
+    `certutil.exe -urlcache -split -f "http://managa.ru/7za.exe" 7za.exe`  
+    `7za x -y -pCMgtdUk1YAvtqBSl0eaAJJcj3TcyHI1ZmTv7j4NoS9jIv6DNvN2MQsmSDANoeOjN nagakama.7z -r`  
+
+### configapps stage
+
+- `cd git`  
+    `call post-install.bat`  
+
+### startapps stage
+
+- `git-cmd.exe`  
+    `cd ..`  
+    `git clone https://github.com/managanemeke/nagakama`  
+    `call nagakama_full_start.bat`
+
+### testing stage
+
+- `certutil.exe -urlcache -split -f "http://localhost/" index.html`  
+    `type index.html`  
+    and you will see...
+
+### stoping stage
+
+- `call nagakama_full_stop.bat`
+
