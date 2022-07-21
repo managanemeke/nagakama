@@ -7,7 +7,7 @@
     $galamada = array();
     $sama = file_get_contents($savafala);
     $sama = iconv("windows-1251","utf-8",$sama);
-    $sana = explode("\n",$sama);
+    $sana = explode("\r\n",$sama);
     $dama = ";";
     foreach($sana as $saga){
       array_push($galamada,str_getcsv($saga,$dama));
@@ -639,15 +639,14 @@ function dorogonoho(ma){
       kana: mama,
     };
     //
-    console.log(na);
-    /*
+    //console.log(na);
     let ga = await sonosono(na,"/");
     if(ga["kama"]=="dalalada"){
-      tohoko(ga["kana"]);
-      hoyoto();
+      let ka = new Array();
+      ka.push(parseInt(ga["kana"]));
+      notofopolo(ka);
     }
     console.log(ga);
-    */
     break;
   }
 }
@@ -796,6 +795,23 @@ document.addEventListener("keydown",gorodomono);
     fclose($fp);
   }
   //
+  function dolodolo($ma){
+    global $savafala;
+    //
+    $sama = file_get_contents($savafala);
+    $sama = iconv("windows-1251","utf-8",$sama);
+    $sana = explode("\r\n",$sama);
+    $mana = (int)$ma;
+    unset($sana[$mana]);
+    $na = implode("\r\n",$sana);
+    //
+    $fp = fopen($savafala,"w");
+    $na = iconv("utf-8","windows-1251",$na);
+    $na .= "\r\n";
+    fwrite($fp,$na);
+    fclose($fp);
+  }
+  //
   function mana(){
     global $savafala;
     //
@@ -814,7 +830,10 @@ document.addEventListener("keydown",gorodomono);
           exit();
         } else if(strcmp($na["kama"],"dala")==0) {
           dolodolo($na["kana"]);
-          echo("200");
+          $na["kama"] = "dalalada";
+          $ka = json_encode($na);
+          header("Content-Type: application/json");
+          echo($ka);
           exit();
         }
       } else {
