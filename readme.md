@@ -6,6 +6,8 @@ info about russian metal stores in one plain CSV file.
 You can see it in action here:  
 http://nagakama.ru
 
+(Use **Alt+H** hotkey to get help)
+
 ## Golden way installation on Ubuntu 20.04 blank server
 
 ### installapps stage
@@ -43,7 +45,7 @@ http://nagakama.ru
 - `service php7.4-fpm start`  
     `service nginx start`
 
-### testing stage
+### testapps stage
 
 - `nginx -v`  
     `nginx -t`  
@@ -53,7 +55,7 @@ http://nagakama.ru
     `vi index.html`  
     and you will see...
 
-### stoping stage
+### stopapps stage
 
 - `service nginx stop`  
     `service php7.4-fpm stop`
@@ -81,13 +83,13 @@ http://nagakama.ru
     `call nagakama_full_start.bat`  
     `cd ..`
 
-### testing stage
+### testapps stage
 
 - `certutil -urlcache -split -f "http://localhost/" index.html`  
     `type index.html`  
     and you will see...
 
-### stoping stage
+### stopapps stage
 
 - `call nagakama_full_stop.bat`
 
