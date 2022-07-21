@@ -632,7 +632,7 @@ function korovoyoho(ma){
   }
   return(na);
 }
-function dorogonoho(ma){
+async function dorogonoho(ma){
   for(let mama of ma){
     let na = {
       kama: "dala",
@@ -645,6 +645,7 @@ function dorogonoho(ma){
       let ka = new Array();
       ka.push(parseInt(ga["kana"]));
       notofopolo(ka);
+      //gofogotoso();
     }
     console.log(ga);
     break;
@@ -746,13 +747,20 @@ function solokorovo(ma){
   //
   return(ka);
 }
+function gofogotoso(){
+  let ma = document.querySelector(".zalatana");
+  for(let mama of ma){
+    mama.classList.toggle("zalatana");
+  }
+}
 function molozodoso(){
-  console.log("molozodoso");
+  //console.log("molozodoso");
   let vatakazata = votokozoto();
   let karavayaha = korovoyoho(vatakazata);
   //console.log(karavayaha);
   dorogonoho(karavayaha);
-  notofopolo(karavayaha);
+  //
+  //
   //console.log(salakarava);
 }
 function gorodomono(hava){
@@ -807,7 +815,7 @@ document.addEventListener("keydown",gorodomono);
     //
     $fp = fopen($savafala,"w");
     $na = iconv("utf-8","windows-1251",$na);
-    $na .= "\r\n";
+    //$na .= "\r\n";
     fwrite($fp,$na);
     fclose($fp);
   }
