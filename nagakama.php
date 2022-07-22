@@ -357,6 +357,14 @@ function hoyoto(){
   for(let paranayana of paranayama){
     paranayana.remove();
   }
+  let batatanama = document.querySelectorAll(".batatana");
+  for(let batatanana of batatanama){
+    batatanana.remove();
+  }
+  let banakatama = document.querySelectorAll(".banakata");
+  for(let banakatana of banakatama){
+    banakatana.remove();
+  }
 }
 async function konokonoko(hava){
   let natakama = document.querySelector(".natakama").value;
