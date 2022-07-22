@@ -133,6 +133,9 @@ input, button {
 button:hover {
   cursor: pointer;
 }
+.vatana {
+  padding: 2rem;
+}
 .masana {
   width: 100%;
   min-height: 100vh;
@@ -161,7 +164,7 @@ button:hover {
   padding: 1rem;
 }
 .paranaya:hover {
-  background-color: #f0f8ff;
+  background-color: #fff0f5;
   border-radius: 0.5rem;
 }
 .zalatana {
@@ -171,12 +174,15 @@ button:hover {
   padding: 1rem;
 }
 .banakata:hover {
-  background-color: #f0f8ff;
+  background-color: #e0ffff;
   border-radius: 0.5rem;
 }
 .baraka {
   display: grid;
   grid-template-columns: var(--vava);
+}
+.batatana {
+  padding: 1rem;
 }
 .batatana:hover {
   cursor: pointer;
@@ -257,7 +263,10 @@ function modo(hava){
   let nama = 0;
   ha = fasaba;
   while(lafala){
-    if(nama%namakana == namaba){paravarana(ha);}
+    if(nama%namakana == namaba &&
+        ha.classList.contains("baranata")){
+      paravarana(ha);
+    }
     if(ha.nextElementSibling !== null){
       ha = ha.nextElementSibling;
     } else {
@@ -393,148 +402,148 @@ function bolosokoso(){
   let na,ga;
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   na.innerHTML = "Alt+H";
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   na.innerHTML = "показать справку";
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   ma.append(na);
   ////
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   na.innerHTML = "Alt+R";
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   na.innerHTML = "удалить выделенную строку";
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   ma.append(na);
   ////
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   na.innerHTML = "Alt+I";
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   na.innerHTML = "добавить строку";
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   ma.append(na);
   ////
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   na.innerHTML = "ЛКМ";
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   na.innerHTML = "выделить строку";
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   ma.append(na);
   ////
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   na.innerHTML = "СКМ";
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   na.innerHTML = "перейти по ссылке";
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   ma.append(na);
   ////
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   na.innerHTML = "ПКМ";
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   na.innerHTML = "копировать в буфер";
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   ma.append(na);
   ////
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   na.innerHTML = "2ЛКМ";
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   na.innerHTML = "перевернуть столб";
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   ma.append(na);
   ////
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   na.innerHTML = "&nbsp;";
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   na.innerHTML = "&nbsp;";
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   na.innerHTML = "&nbsp;";
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("banakata");
+  na.classList.add("paranaya");
   na.innerHTML = "&nbsp;";
   ma.append(na);
   //
@@ -556,7 +565,7 @@ function torokoporo(){
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("paranaya");
+  na.classList.add("banakata");
   ga = document.createElement("input");
   ga.setAttribute("type","text");
   ga.setAttribute("autocomplete","nope");
@@ -578,7 +587,7 @@ function torokoporo(){
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("paranaya");
+  na.classList.add("banakata");
   ga = document.createElement("input");
   ga.setAttribute("type","text");
   ga.setAttribute("autocomplete","nope");
@@ -600,7 +609,7 @@ function torokoporo(){
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("paranaya");
+  na.classList.add("banakata");
   ga = document.createElement("input");
   ga.setAttribute("type","text");
   ga.setAttribute("autocomplete","nope");
@@ -622,7 +631,7 @@ function torokoporo(){
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("paranaya");
+  na.classList.add("banakata");
   ga = document.createElement("input");
   ga.setAttribute("type","text");
   ga.setAttribute("autocomplete","nope");
@@ -644,7 +653,7 @@ function torokoporo(){
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("paranaya");
+  na.classList.add("banakata");
   ga = document.createElement("input");
   ga.setAttribute("type","text");
   ga.setAttribute("autocomplete","nope");
@@ -666,7 +675,7 @@ function torokoporo(){
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("paranaya");
+  na.classList.add("banakata");
   ga = document.createElement("input");
   ga.setAttribute("type","text");
   ga.setAttribute("autocomplete","nope");
@@ -688,7 +697,7 @@ function torokoporo(){
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("paranaya");
+  na.classList.add("banakata");
   ga = document.createElement("input");
   ga.setAttribute("type","text");
   ga.setAttribute("autocomplete","nope");
@@ -710,7 +719,7 @@ function torokoporo(){
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("paranaya");
+  na.classList.add("banakata");
   ga = document.createElement("input");
   ga.setAttribute("type","text");
   ga.setAttribute("autocomplete","nope");
@@ -732,7 +741,7 @@ function torokoporo(){
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("paranaya");
+  na.classList.add("banakata");
   ga = document.createElement("input");
   ga.setAttribute("type","text");
   ga.setAttribute("autocomplete","nope");
@@ -754,7 +763,7 @@ function torokoporo(){
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("paranaya");
+  na.classList.add("banakata");
   ga = document.createElement("input");
   ga.setAttribute("type","text");
   ga.setAttribute("autocomplete","nope");
@@ -763,7 +772,6 @@ function torokoporo(){
   ma.append(na);
   //
   na = document.createElement("div");
-  na.classList.add("paranaya");
   na.classList.add("batatana");
   ga = document.createElement("button");
   ga.innerHTML = "создать";
